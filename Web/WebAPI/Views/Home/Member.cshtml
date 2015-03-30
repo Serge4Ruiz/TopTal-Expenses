@@ -1,0 +1,66 @@
+﻿@{
+	ViewBag.Title = "Member";
+}
+<style>
+	label { width: 200px; text-align: right; }
+	form { border: 1px solid Silver; display: inline-table; padding: 10px; border-radius: 5px; }
+	div.Button { border: 1px solid Silver; padding: 1px 4px; display: inline-block; float: right; cursor: pointer; }
+</style>
+<h2>Member Tests</h2>
+<div id="Error" style="color: red;"></div>
+<h3>Login</h3>
+<form id="Login">
+	<div>
+		<label for="UserName">User Name</label>
+		<input type="text" name="UserName" />
+	</div>
+	<div>
+		<label for="Password">Passwod</label>
+		<input type="password" name="Password" />
+	</div>
+	<div class="Button" onclick="login()">Login</div>
+	<div id="UserName"></div>
+</form>
+<h3>Add Expense</h3>
+<form id="AddExpense">
+	<div>
+		<label for="Date">Date</label>
+		<input type="text" name="Date" class="Date" />
+	</div>
+	<div>
+		<label for="TimeHours">Time (Hour)</label>
+		<input type="text" name="TimeHours" />
+	</div>
+	<div>
+		<label for="TimeMinutes">Time (Min)</label>
+		<input type="text" name="TimeMinutes" />
+	</div>
+	<div>
+		<label for="TimeTT">Time (AM/PM)</label>
+		<input type="text" name="TimeTT" value="AM" />
+	</div>
+	<div>
+		<label for="Description">Description</label>
+		<input type="text" name="Description" />
+	</div>
+	<div>
+		<label for="Amount">Amount</label>
+		<input type="text" name="Amount" />
+	</div>
+	<div>
+		<label for="Comment">Comment</label>
+		<input type="text" name="Comment" />
+	</div>
+	<div class="Button" onclick="addSingleExpense()">Add</div>
+</form>
+<h3>Get Weekly Report</h3>
+<form>
+	<div>
+		<label for="WeeklyReportDate">Date</label>
+		<input type="text" id="WeeklyReportDate" class="Date" />
+	</div>
+	<div class="Button" onclick="getWeeklyReport()">Report</div>
+</form>
+<h3>Result</h3>
+<div id="ExpenseList"></div>
+<script src="~/Scripts/toptal.js"></script>

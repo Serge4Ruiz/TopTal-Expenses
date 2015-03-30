@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{509C9CD9-D063-465B-8406-C433944C5BA9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TopTal.Expenses.ServiceLayer.Admin</RootNamespace>
+    <AssemblyName>TopTal.Expenses.ServiceLayer.Admin</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ApplicationIcon></ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LC.Core.Engine">
+      <HintPath>C:\Development\Logical Consulting\trunk\Core\Engine\bin\Debug\LC.Core.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="TopTal.Expenses.DataAccessLayer.Analytics">
+      <HintPath>..\..\Data Access Layer\Analytics\bin\TopTal.Expenses.DataAccessLayer.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="TopTal.Expenses.DataAccessLayer.Admin">
+      <HintPath>..\..\Data Access Layer\Admin\bin\TopTal.Expenses.DataAccessLayer.Admin.dll</HintPath>
+    </Reference>
+    <Reference Include="TopTal.Expenses.DataAccessLayer.Membership">
+      <HintPath>..\..\Data Access Layer\Membership\bin\TopTal.Expenses.DataAccessLayer.Membership.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+    </Reference>
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="System.Data">
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+    </Reference>
+    <Reference Include="System.Xml">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+    </Reference>
+    <Compile Include="Properties\AssemblyInfo.cs">
+    </Compile>
+    <Compile Include="UserManager.cs">
+    </Compile>
+    <Compile Include="UserManager.designer.cs">
+      <DependentUpon>UserManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileUploadManager.cs">
+    </Compile>
+    <Compile Include="FileUploadManager.designer.cs">
+      <DependentUpon>FileUploadManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContentManager.cs">
+    </Compile>
+    <Compile Include="ContentManager.designer.cs">
+      <DependentUpon>ContentManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskManager.cs">
+    </Compile>
+    <Compile Include="TaskManager.designer.cs">
+      <DependentUpon>TaskManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDefinitionManager.cs">
+    </Compile>
+    <Compile Include="ReportDefinitionManager.designer.cs">
+      <DependentUpon>ReportDefinitionManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportManager.cs">
+    </Compile>
+    <Compile Include="ReportManager.designer.cs">
+      <DependentUpon>ReportManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\User.cs">
+    </Compile>
+    <Compile Include="Model\User.designer.cs">
+      <DependentUpon>Model\User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\FileUpload.cs">
+    </Compile>
+    <Compile Include="Model\FileUpload.designer.cs">
+      <DependentUpon>Model\FileUpload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Content.cs">
+    </Compile>
+    <Compile Include="Model\Content.designer.cs">
+      <DependentUpon>Model\Content.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Task.cs">
+    </Compile>
+    <Compile Include="Model\Task.designer.cs">
+      <DependentUpon>Model\Task.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TaskComment.cs">
+    </Compile>
+    <Compile Include="Model\TaskComment.designer.cs">
+      <DependentUpon>Model\TaskComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TaskHistory.cs">
+    </Compile>
+    <Compile Include="Model\TaskHistory.designer.cs">
+      <DependentUpon>Model\TaskHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TaskAttachment.cs">
+    </Compile>
+    <Compile Include="Model\TaskAttachment.designer.cs">
+      <DependentUpon>Model\TaskAttachment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ReportDefinition.cs">
+    </Compile>
+    <Compile Include="Model\ReportDefinition.designer.cs">
+      <DependentUpon>Model\ReportDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Report.cs">
+    </Compile>
+    <Compile Include="Model\Report.designer.cs">
+      <DependentUpon>Model\Report.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent></PostBuildEvent>
+  </PropertyGroup>
+</Project>

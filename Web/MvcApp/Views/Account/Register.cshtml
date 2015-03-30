@@ -1,0 +1,31 @@
+﻿@model TopTal.Expenses.MvcApp.Models.RegisterModel
+@{
+	ViewBag.Title = "Register";
+}
+<style>
+	label { width: 160px; }
+</style>
+<hgroup class="title">
+	<h1>@ViewBag.Title.</h1>
+	<h2>Create a new account.</h2>
+</hgroup>
+<form id="userSignup">
+	<div class="validation-summary-errors" id="RegistrationError"></div>
+	<fieldset>
+		<ol>
+			<li>
+				<label for="UserName">User Name</label>
+				<input id="UserName" type="text" name="Username" placeholder="Name" data-val-required="The User name field is required." data-val="true" />
+			</li>
+			<li>
+				<label for="Password">Password</label>
+				<input id="Password" type="password" name="Password" placeholder="Password" data-val-required="The Password field is required." data-val="true" />
+			</li>
+			<li>
+				<label for="ConfirmPassword">Confirm Password</label>
+				<input id="ConfirmPassword" type="password" name="ConfirmPassword" placeholder="Confirm password" data-val-equalto-other="*.Password" data-val-equalto="The password and confirmation password do not match." data-val="true" />
+			</li>
+		</ol>
+		<div style="background-color: #d3dce0; border: 1px solid #787878; cursor: pointer; font-size: 1.2em; font-weight: 600; margin-right: 8px; padding: 7px; width: auto; display: inline-block;" onclick="register()">Sign Up</div>
+	</fieldset>
+</form>

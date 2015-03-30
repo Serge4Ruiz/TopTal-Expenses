@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3D309CB8-3C96-4492-8B96-E458EE30E850}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TopTal.Expenses.DataLayer.MongoDB</RootNamespace>
+    <AssemblyName>TopTal.Expenses.DataLayer.MongoDB</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LC.Core.Data">
+      <HintPath>C:\Development\Logical Consulting\trunk\Core\Data\bin\Debug\LC.Core.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="LC.Core.Engine">
+      <HintPath>C:\Development\Logical Consulting\trunk\Core\Engine\bin\Debug\LC.Core.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>C:\Development\Third Party Software\MongoDB\mongo-csharp-driver\Bson\bin\Debug\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>C:\Development\Third Party Software\MongoDB\mongo-csharp-driver\Driver\bin\Debug\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+    </Reference>
+    <Reference Include="System.Data">
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+    </Reference>
+    <Reference Include="System.Xml">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+    </Reference>
+    <Compile Include="Properties\AssemblyInfo.cs">
+    </Compile>
+    <Compile Include="Properties\Settings.settings">
+    </Compile>
+    <Compile Include="BaseDocument.cs">
+    </Compile>
+    <Compile Include="BaseObject.cs">
+    </Compile>
+    <Compile Include="DataContext.cs">
+    </Compile>
+    <Compile Include="DocumentList.cs">
+    </Compile>
+    <Compile Include="DocumentReference.cs">
+    </Compile>
+    <Compile Include="TableProperty.cs">
+    </Compile>
+    <Compile Include="Analytics\AccountLoginDB.cs">
+    </Compile>
+    <Compile Include="Analytics\AccountLoginDB.designer.cs">
+      <DependentUpon>Analytics\AccountLoginDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analytics\AccountUsageDB.cs">
+    </Compile>
+    <Compile Include="Analytics\AccountUsageDB.designer.cs">
+      <DependentUpon>Analytics\AccountUsageDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserDB.cs">
+    </Compile>
+    <Compile Include="Admin\UserDB.designer.cs">
+      <DependentUpon>Admin\UserDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FileUploadDB.cs">
+    </Compile>
+    <Compile Include="Admin\FileUploadDB.designer.cs">
+      <DependentUpon>Admin\FileUploadDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ContentDB.cs">
+    </Compile>
+    <Compile Include="Admin\ContentDB.designer.cs">
+      <DependentUpon>Admin\ContentDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\TaskDB.cs">
+    </Compile>
+    <Compile Include="Admin\TaskDB.designer.cs">
+      <DependentUpon>Admin\TaskDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ReportDefinitionDB.cs">
+    </Compile>
+    <Compile Include="Admin\ReportDefinitionDB.designer.cs">
+      <DependentUpon>Admin\ReportDefinitionDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ReportDB.cs">
+    </Compile>
+    <Compile Include="Admin\ReportDB.designer.cs">
+      <DependentUpon>Admin\ReportDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Membership\MemberDB.cs">
+    </Compile>
+    <Compile Include="Membership\MemberDB.designer.cs">
+      <DependentUpon>Membership\MemberDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analytics\Model\AccountLogin.cs">
+    </Compile>
+    <Compile Include="Analytics\Model\AccountLogin.designer.cs">
+      <DependentUpon>Analytics\Model\AccountLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analytics\Model\AccountUsage.cs">
+    </Compile>
+    <Compile Include="Analytics\Model\AccountUsage.designer.cs">
+      <DependentUpon>Analytics\Model\AccountUsage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Model\User.cs">
+    </Compile>
+    <Compile Include="Admin\Model\User.designer.cs">
+      <DependentUpon>Admin\Model\User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Model\FileUpload.cs">
+    </Compile>
+    <Compile Include="Admin\Model\FileUpload.designer.cs">
+      <DependentUpon>Admin\Model\FileUpload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Model\Content.cs">
+    </Compile>
+    <Compile Include="Admin\Model\Content.designer.cs">
+      <DependentUpon>Admin\Model\Content.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Model\Task.cs">
+    </Compile>
+    <Compile Include="Admin\Model\Task.designer.cs">
+      <DependentUpon>Admin\Model\Task.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Model\TaskComment.cs">
+    </Compile>
+    <Compile Include="Admin\Model\TaskComment.designer.cs">
+      <DependentUpon>Admin\Model\TaskComment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Model\TaskHistory.cs">
+    </Compile>
+    <Compile Include="Admin\Model\TaskHistory.designer.cs">
+      <DependentUpon>Admin\Model\TaskHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Model\TaskAttachment.cs">
+    </Compile>
+    <Compile Include="Admin\Model\TaskAttachment.designer.cs">
+      <DependentUpon>Admin\Model\TaskAttachment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Model\ReportDefinition.cs">
+    </Compile>
+    <Compile Include="Admin\Model\ReportDefinition.designer.cs">
+      <DependentUpon>Admin\Model\ReportDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Model\Report.cs">
+    </Compile>
+    <Compile Include="Admin\Model\Report.designer.cs">
+      <DependentUpon>Admin\Model\Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Membership\Model\Member.cs">
+    </Compile>
+    <Compile Include="Membership\Model\Member.designer.cs">
+      <DependentUpon>Membership\Model\Member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Membership\Model\Expense.cs">
+    </Compile>
+    <Compile Include="Membership\Model\Expense.designer.cs">
+      <DependentUpon>Membership\Model\Expense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Membership\Model\MemberReference.cs">
+    </Compile>
+    <Compile Include="Membership\Model\MemberReference.designer.cs">
+      <DependentUpon>Membership\Model\MemberReference.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

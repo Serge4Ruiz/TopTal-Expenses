@@ -1,0 +1,1 @@
+C:\Development\TopTal\Interview 3\Service Layer\Exporters\obj\Debug\TopTal.Expenses.Exporters.csprojResolveAssemblyReference.cache

@@ -1,0 +1,83 @@
+﻿@{
+	ViewBag.Title = "Member";
+}
+<style>
+	label {
+		width: 200px;
+		text-align: right;
+	}
+
+	form {
+		border: 1px solid Silver;
+		display: inline-table;
+		padding: 10px;
+		border-radius: 5px;
+	}
+
+	div.Button {
+		border: 1px solid Silver;
+		padding: 1px 4px;
+		display: inline-block;
+		float: right;
+		cursor: pointer;
+	}
+</style>
+<script src="~/Scripts/app.js"></script>
+<h2>Expenses</h2>
+<div ng-app="member" id="MemberList">
+	<ul class="list-group" ng-controller="MemberController as member">
+		<li class="list-group-item" ng-repeat="expense in member.expenses">
+			<span class="badge" style="font-size: 14pt;">{{expense.Amount | currency}}</span>
+			{{expense.Description}}
+			<div style="font-size: 9pt; font-style: italic;">{{expense.Comment}}</div>
+			<div style="font-size: 9pt;">
+				<span style="float: right"><b>Created on:</b> {{expense.CreatedOn | date : 'EEE MM/dd/yyyy' }}</span>
+				<b>Expense date:</b> {{expense.ExpenseDate | date : 'EEE MM/dd/yyyy' }}
+			</div>
+		</li>
+	</ul>
+</div>
+<h3>Weekly Report</h3>
+<form>
+	<div>
+		<label for="Weekly Report Date">Date</label>
+		<input type="text" id="WeeklyReportDate" />
+	</div>
+	<div class="Button" onclick="getWeeklyReport()">Report</div>
+</form>
+<h3>New Expense</h3>
+<form id="AddExpense">
+	<div>
+		<label for="Date">Date</label>
+		<input type="text" name="Date" class="Date" />
+	</div>
+	<div>
+		<label for="TimeHours">Time (Hour)</label>
+		<input type="text" name="TimeHours" />
+	</div>
+	<div>
+		<label for="TimeMinutes">Time (Min)</label>
+		<input type="text" name="TimeMinutes" />
+	</div>
+	<div>
+		<label for="TimeTT">Time (AM/PM)</label>
+		<input type="text" name="TimeTT" value="AM" />
+	</div>
+	<div>
+		<label for="Description">Description</label>
+		<input type="text" name="Description" />
+	</div>
+	<div>
+		<label for="Amount">Amount</label>
+		<input type="text" name="Amount" />
+	</div>
+	<div>
+		<label for="Comment">Comment</label>
+		<input type="text" name="Comment" />
+	</div>
+	<div class="Button" onclick="addSingleExpense()">Add</div>
+</form>
+<h3>Result</h3>
+<div id="ExpenseList"></div>
+
+<script src="~/Scripts/toptal.expensesMember.js"></script>

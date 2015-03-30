@@ -1,0 +1,10 @@
+﻿<text id="UserInfo" style="display: none;">
+	Hello, <span id="UserNameDisplay"></span>
+	<a href="javascript:logout()">Log off</a>
+</text>
+<div id="Access" style="display: none;">
+	<ul>
+		<li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+		<li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+	</ul>
+</div>

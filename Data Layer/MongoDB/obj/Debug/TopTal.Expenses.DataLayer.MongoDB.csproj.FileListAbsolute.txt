@@ -1,0 +1,15 @@
+C:\Development\TopTal\Interview 3\Data Layer\MongoDB\bin\TopTal.Expenses.DataLayer.MongoDB.dll
+C:\Development\TopTal\Interview 3\Data Layer\MongoDB\bin\TopTal.Expenses.DataLayer.MongoDB.pdb
+C:\Development\TopTal\Interview 3\Data Layer\MongoDB\bin\LC.Core.Data.dll
+C:\Development\TopTal\Interview 3\Data Layer\MongoDB\bin\LC.Core.Engine.dll
+C:\Development\TopTal\Interview 3\Data Layer\MongoDB\bin\MongoDB.Bson.dll
+C:\Development\TopTal\Interview 3\Data Layer\MongoDB\bin\MongoDB.Driver.dll
+C:\Development\TopTal\Interview 3\Data Layer\MongoDB\bin\LC.Core.Data.pdb
+C:\Development\TopTal\Interview 3\Data Layer\MongoDB\bin\LC.Core.Engine.pdb
+C:\Development\TopTal\Interview 3\Data Layer\MongoDB\bin\MongoDB.Bson.pdb
+C:\Development\TopTal\Interview 3\Data Layer\MongoDB\bin\MongoDB.Bson.xml
+C:\Development\TopTal\Interview 3\Data Layer\MongoDB\bin\MongoDB.Driver.pdb
+C:\Development\TopTal\Interview 3\Data Layer\MongoDB\bin\MongoDB.Driver.xml
+C:\Development\TopTal\Interview 3\Data Layer\MongoDB\obj\Debug\TopTal.Expenses.DataLayer.MongoDB.dll
+C:\Development\TopTal\Interview 3\Data Layer\MongoDB\obj\Debug\TopTal.Expenses.DataLayer.MongoDB.pdb
+C:\Development\TopTal\Interview 3\Data Layer\MongoDB\obj\Debug\TopTal.Expenses.DataLayer.MongoDB.csprojResolveAssemblyReference.cache

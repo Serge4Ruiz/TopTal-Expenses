@@ -1,0 +1,52 @@
+﻿@model TopTal.Expenses.MvcApp.Models.LoginModel
+
+@{
+	ViewBag.Title = "Log in";
+}
+
+<hgroup class="title">
+	<h1>@ViewBag.Title.</h1>
+</hgroup>
+<style>
+	label { width: 100px; }
+</style>
+<section id="loginForm">
+	<h2>Use a local account to log in.</h2>
+	<form id="userLogin">
+		<div class="validation-summary-errors" id="RegistrationError"></div>
+		<fieldset>
+			<ol>
+				<li>
+					<label for="UserName">User Name</label>
+					<input id="UserName" type="text" name="Username" placeholder="Name" data-val-required="The User name field is required." data-val="true" />
+				</li>
+				<li>
+					<label for="Password">Password</label>
+					<input id="Password" type="password" name="Password" placeholder="Password" data-val-required="The Password field is required." data-val="true" />
+				</li>
+				<li>
+					<input type="checkbox" name="RememberMe" />
+					<label for="RememberMe" style="width: 200px;">Remember me</label>
+				</li>
+			</ol>
+			<div style="background-color: #d3dce0; border: 1px solid #787878; cursor: pointer; font-size: 1.2em; font-weight: 600; margin-right: 8px; padding: 7px; width: auto; display: inline-block;" onclick="login()">Log In</div>
+		</fieldset>
+		<p>
+			<a href="/Account/Register">Register</a> if you don't have an account.
+		</p>
+	</form>
+</section>
+
+<section class="social" id="socialLoginForm">
+	<h2>Use another service to log in.</h2>
+	@Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
+</section>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		$("#UserName").focus();
+	})
+</script>
+@section Scripts {
+	@Scripts.Render("~/bundles/jqueryval")
+}

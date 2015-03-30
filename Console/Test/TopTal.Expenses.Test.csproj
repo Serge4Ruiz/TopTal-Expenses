@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9717BA37-3E7C-4921-87CF-A8C56A48B15D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TopTal.Expenses.Test</RootNamespace>
+    <AssemblyName>TopTal.Expenses.Test</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LC.Core.Engine">
+      <HintPath>..\..\..\..\Logical Consulting\trunk\Core\Engine\bin\Debug\LC.Core.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs" />
+    <Compile Include="Analytics.cs" />
+    <Compile Include="BaseTestSuite.cs" />
+    <Compile Include="Exports.cs" />
+    <Compile Include="Imports.cs" />
+    <Compile Include="Membership.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Business Layer\Admin\TopTal.Expenses.BusinessLayer.Admin.csproj">
+      <Project>{fba099b9-5330-4004-b7e5-1787911a9039}</Project>
+      <Name>TopTal.Expenses.BusinessLayer.Admin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business Layer\Analytics\TopTal.Expenses.BusinessLayer.Analytics.csproj">
+      <Project>{b78d60d4-9ea8-4349-b323-54a6b6f8269c}</Project>
+      <Name>TopTal.Expenses.BusinessLayer.Analytics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Business Layer\Membership\TopTal.Expenses.BusinessLayer.Membership.csproj">
+      <Project>{1829e037-f378-4f39-9229-bf22d5499aff}</Project>
+      <Name>TopTal.Expenses.BusinessLayer.Membership</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data Access Layer\Admin\TopTal.Expenses.DataAccessLayer.Admin.csproj">
+      <Project>{be68d13e-03b5-4010-96cb-89a20705f2d6}</Project>
+      <Name>TopTal.Expenses.DataAccessLayer.Admin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data Access Layer\Analytics\TopTal.Expenses.DataAccessLayer.Analytics.csproj">
+      <Project>{4354efdb-d546-4b4d-bc38-51614d9bbf9b}</Project>
+      <Name>TopTal.Expenses.DataAccessLayer.Analytics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data Access Layer\Membership\TopTal.Expenses.DataAccessLayer.Membership.csproj">
+      <Project>{43ec6990-0f80-4c15-8d49-0c1b518be7f6}</Project>
+      <Name>TopTal.Expenses.DataAccessLayer.Membership</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data Layer\MongoDB\TopTal.Expenses.DataLayer.MongoDB.csproj">
+      <Project>{3d309cb8-3c96-4492-8b96-e458ee30e850}</Project>
+      <Name>TopTal.Expenses.DataLayer.MongoDB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Service Layer\Admin\TopTal.Expenses.ServiceLayer.Admin.csproj">
+      <Project>{509c9cd9-d063-465b-8406-c433944c5ba9}</Project>
+      <Name>TopTal.Expenses.ServiceLayer.Admin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Service Layer\Analytics\TopTal.Expenses.ServiceLayer.Analytics.csproj">
+      <Project>{8dde6ac2-5e3f-4315-a0cf-fa09becb0960}</Project>
+      <Name>TopTal.Expenses.ServiceLayer.Analytics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Service Layer\Exporters\TopTal.Expenses.ServiceLayer.Exporters.csproj">
+      <Project>{41b666e8-fdc0-4011-9548-48cba174f923}</Project>
+      <Name>TopTal.Expenses.ServiceLayer.Exporters</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Service Layer\Importers\TopTal.Expenses.ServiceLayer.Importers.csproj">
+      <Project>{b13ce931-6846-4e84-bfc3-a6fbd6e6fe9f}</Project>
+      <Name>TopTal.Expenses.ServiceLayer.Importers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Service Layer\Membership\TopTal.Expenses.ServiceLayer.Membership.csproj">
+      <Project>{11ddbe58-eb64-427a-8c63-3c5f05308f1b}</Project>
+      <Name>TopTal.Expenses.ServiceLayer.Membership</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
